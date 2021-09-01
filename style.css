@@ -1,0 +1,13 @@
+.logo {
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+}
+
+.textarea {
+    height: 300px;
+    width: 250px;
+}
