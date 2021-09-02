@@ -25,7 +25,7 @@
   <body>
     
     <!-- Navbar -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar">
       <div class="container d-flex">
         <span class="navbar-brand mb-3 align-middle">
           <h1 class="logo">Ci</h1>
@@ -34,10 +34,10 @@
     </nav>
 
     <!-- Main Section -->
-    <main>
-      <div class="container mt-5">
+    <main class="main-area">
+      <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-12 d-flex justify-content-center">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Text</h5>
@@ -45,12 +45,12 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="d-flex col-lg-4 col-md-12 justify-content-center">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Settings</h5>
-                <a href="#">Encode</a>
-                <a href="#">Decode</a>
+                <a href="#" class="anc">Encode</a>
+                <a href="#" class="anc">Decode</a>
                 <hr>
                 <p class="text-muted">Shift Constant</p>
                 <div class="container">
@@ -78,10 +78,11 @@
                   </label>
                 </div>
                 <hr>
+                <button class="btn btn-md">Encode</button>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="d-flex col-lg-4 col-md-12 justify-content-center">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Cypher Text</h5>
