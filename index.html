@@ -37,15 +37,21 @@
     <main class="main-area">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-12 d-flex justify-content-center">
+          
+          <!-- User Input -->
+          <div class="input col-lg-4 col-md-12 d-flex justify-content-center">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Text</h5>
-                <textarea class="textarea mt-3"></textarea>
+                <h5 class="card-title">Normal Text</h5>
+                <hr>
+                <textarea class="textarea mt-3" placeholder="Enter your text"></textarea>
               </div>
+              <button class="btn btn-md d-none btn-next" onclick="page2()">Next</button>
             </div>
           </div>
-          <div class="d-flex col-lg-4 col-md-12 justify-content-center">
+
+          <!-- Settings -->
+          <div class="settings d-flex col-lg-4 col-md-12 justify-content-center">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Settings</h5>
@@ -53,20 +59,20 @@
                 <a href="#" class="anc">Decode</a>
                 <hr>
                 <p class="text-muted">Shift Constant</p>
-                <div class="container">
-                <div class="row">
-                  <div class="col-md-4">
-                    <p>-</p>
-                  </div>
-                  <div class="col-md-4">
-                    <p class="text-center">6</p>
-                  </div>
-                  <div class="col-md-4">
-                    <p class="text-end">+</p>
-                  </div>
-                </div>
-                </div>
-                <hr>
+                <!-- <div class="container"> -->
+                <!-- <div class="row"> -->
+                  <!-- <div class="col-md-4"> -->
+                    <!-- <button class="btn btn-md btn-minus">-</button> -->
+                  <!-- </div> -->
+                  <!-- <div class="col-md-4"> -->
+                    <!-- <p class="text-center shift">6</p> -->
+                  <!-- </div> -->
+                  <!-- <div class="col-md-4"> -->
+                    <!-- <button class="btn btn-md btn-plus">+</button> -->
+                  <!-- </div> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- <hr> -->
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="case" checked>
                   <label class="form-check-label" for="case">
@@ -78,16 +84,21 @@
                   </label>
                 </div>
                 <hr>
-                <button class="btn btn-md">Encode</button>
+                <button class="btn btn-md btn-back d-none" onclick="page1()">Back</button>
+                <button class="btn btn-md" onclick="page3()">Encode</button>
               </div>
             </div>
           </div>
-          <div class="d-flex col-lg-4 col-md-12 justify-content-center">
+
+          <!-- Display Cypher -->
+          <div class="output d-flex col-lg-4 col-md-12 justify-content-center">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Cypher Text</h5>
+                <hr>
                 <textarea class="textarea mt-3"></textarea>
               </div>
+              <button class="btn btn-md d-none btn-back" onclick="page2()">Back</button>
             </div>
           </div>
         </div>
@@ -100,5 +111,8 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous">
     </script>
+
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
   </body>
 </html>

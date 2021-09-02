@@ -21,13 +21,21 @@
     box-shadow: 10px 30px 20px rgba(0,0,0,0.3);
 }
 
-.textarea {
-    border-radius: 20px;
-}
-
-.textarea {
+.textarea {    
     height: 300px;
     width: 250px;
+    border: none;
+    outline: none;
+    margin-top: 0px !important;
+    padding: 0px;
+}
+
+.btn-next {
+    width: 70px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 16px;
+    left: 30px;
 }
 
 .anc {
