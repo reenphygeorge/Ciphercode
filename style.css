@@ -14,11 +14,7 @@
     padding-top: 80px;
 }
 
-.footer {
-    padding-top: 150px;
-}
-
-.card {
+.data-card {
     height: 400px;
     width: 300px;
     border-radius: 20px;
@@ -34,12 +30,16 @@
     padding: 0px;
 }
 
-.btn-next {
-    width: 70px;
-    border-radius: 6px;
+.btn-home {
     position: relative;
     bottom: 16px;
     left: 20px;
+}
+
+.btn-next {
+    position: relative;
+    bottom: 55px;
+    left: 110px;
 }
 
 .anc {
@@ -54,6 +54,8 @@
 .btn {
     background-color: #BF3EFF;
     color: white;
+    width: 70px;
+    border-radius: 6px;
 }
 
 .btn:hover {
@@ -61,11 +63,51 @@
 }
 
 .btn-back2 {
-    width: 70px;
-    border-radius: 6px;
     position: relative;
     bottom: 49px;
     left: 20px;
+}
+
+.home-card {
+    height: 400px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 10px 30px 20px rgba(0,0,0,0.3);   
+}
+
+.home-text {
+    line-height: 2;
+}
+
+.btn-enc{
+    width: 100px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 2px;
+    left: 15px;
+}
+.btn-dec{
+    width: 100px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 40px;
+    left: 130px;
+}
+
+.footer {
+    padding-top: 150px;
+}
+
+@media screen and (max-width: 480px) {
+    .home-card {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 392px) {
+    .home-card {
+        height: 500px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -77,6 +119,11 @@
 
     .main-area {
         padding-top: 40px;
+        height: 150vh;
+    }
+
+    .textarea {
+        height: 250px;
     }
 
     .footer {
