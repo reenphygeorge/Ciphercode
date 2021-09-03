@@ -10,8 +10,12 @@
 .main-area {
     background: rgb(4, 117, 195, 0.644);
     background: linear-gradient(0deg, rgba(34, 117, 195, 0.644) 0%, rgba(191,62,255,1) 100%);
-    height: 100vh;
+    height: 88vh;
     padding-top: 80px;
+}
+
+.footer {
+    padding-top: 150px;
 }
 
 .card {
@@ -35,7 +39,7 @@
     border-radius: 6px;
     position: relative;
     bottom: 16px;
-    left: 30px;
+    left: 20px;
 }
 
 .anc {
@@ -54,4 +58,39 @@
 
 .btn:hover {
     color: white;
+}
+
+.btn-back2 {
+    width: 70px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 49px;
+    left: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .btn-op {
+        position: relative;
+        bottom: 38px;
+        left: 70px;
+    }
+
+    .main-area {
+        padding-top: 40px;
+    }
+
+    .footer {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (min-height: 699px) and (max-width: 400px) {
+    .footer {
+        padding-top: 190px;
+    }
+
+    .main-area {
+        padding-top: 100px;
+        height: 90vh;
+    }
 }
