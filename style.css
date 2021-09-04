@@ -64,7 +64,7 @@
 
 .btn-back2 {
     position: relative;
-    bottom: 49px;
+    bottom: 16px;
     left: 20px;
 }
 
@@ -94,6 +94,13 @@
     left: 130px;
 }
 
+.btn-op {
+    width: 80px;
+    position: relative;
+    bottom: 38px;
+    left: 80px;
+}
+
 .footer {
     padding-top: 150px;
 }
@@ -111,12 +118,6 @@
 }
 
 @media screen and (max-width: 992px) {
-    .btn-op {
-        width: 80px;
-        position: relative;
-        bottom: 38px;
-        left: 80px;
-    }
 
     .main-area {
         padding-top: 40px;
