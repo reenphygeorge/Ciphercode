@@ -12,8 +12,8 @@ const op_head = document.querySelector(".output-head");
 const btn_back2 = document.querySelector(".btn-back2");
 
 
-var sft_rng = document.getElementById("shift-range");
-var sft_val = document.getElementById("shift-val");
+const sft_rng = document.getElementById("shift-range");
+const sft_val = document.getElementById("shift-val");
 sft_val.innerHTML = (sft_rng.value * 2);
 
 sft_rng.oninput = function () {
