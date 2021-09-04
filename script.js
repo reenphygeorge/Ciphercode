@@ -5,6 +5,7 @@ const inp_head = document.querySelector(".input-head");
 const txtarea = document.querySelector(".textarea");
 const btn_next = document.querySelector(".btn-next");
 const settings = document.querySelector(".settings");
+const btn_op = document.querySelector(".btn-op");
 const btn_back = document.querySelector(".btn-back");
 const output = document.querySelector(".output");
 const op_head = document.querySelector(".output-head");
@@ -15,6 +16,7 @@ const deviceWidth = window.matchMedia("(max-width:991px)");
 function encode() {
     inp_head.innerHTML = "Normal Text";
     op_head.innerHTML = "Cypher Text";
+    btn_op.innerHTML = "Encode";
     if (deviceWidth.matches) {
         page1_mob();
     }
@@ -26,6 +28,7 @@ function encode() {
 function decode() {
     inp_head.innerHTML = "Cypher Text";
     op_head.innerHTML = "Normal Text";
+    btn_op.innerHTML = "Decode";
     if (deviceWidth.matches) {
         page1_mob();
     }
