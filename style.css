@@ -38,7 +38,7 @@
 
 .btn-next {
     position: relative;
-    bottom: 55px;
+    bottom: 54px;
     left: 110px;
 }
 
@@ -96,9 +96,9 @@
 
 .btn-op {
     width: 80px;
-    position: relative;
-    bottom: 38px;
-    left: 80px;
+    /* position: relative;
+    bottom: 0px;
+    left: 0px; */
 }
 
 .footer {
@@ -126,6 +126,13 @@
 
     .textarea {
         height: 250px;
+    }
+
+    .btn-op {
+        width: 80px;
+        position: relative;
+        bottom: 38px;
+        left: 80px;
     }
 
     .footer {
