@@ -112,9 +112,10 @@
 
 @media screen and (max-width: 992px) {
     .btn-op {
+        width: 80px;
         position: relative;
         bottom: 38px;
-        left: 70px;
+        left: 80px;
     }
 
     .main-area {
