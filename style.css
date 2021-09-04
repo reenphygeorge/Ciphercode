@@ -1,152 +1,155 @@
 .navbar {
-    background: rgb(191,62,255);
-    background: linear-gradient(0deg, rgba(191,62,255,1) 100%);
+  background: rgb(191, 62, 255);
+  background: linear-gradient(0deg, rgba(191, 62, 255, 1) 100%);
 }
 
 .logo {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-area {
-    background: rgb(4, 117, 195, 0.644);
-    background: linear-gradient(0deg, rgba(34, 117, 195, 0.644) 0%, rgba(191,62,255,1) 100%);
-    height: 88vh;
-    padding-top: 80px;
+  background: rgb(4, 117, 195, 0.644);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 117, 195, 0.644) 0%,
+    rgba(191, 62, 255, 1) 100%
+  );
+  height: 88vh;
+  padding-top: 80px;
 }
 
 .data-card {
-    height: 400px;
-    width: 300px;
-    border-radius: 20px;
-    box-shadow: 10px 30px 20px rgba(0,0,0,0.3);
+  height: 400px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.3);
 }
 
-.textarea {    
-    height: 250px;
-    width: 250px;
-    border: none;
-    outline: none;
-    margin-top: 0px !important;
-    padding: 0px;
+.textarea {
+  height: 250px;
+  width: 250px;
+  border: none;
+  outline: none;
+  margin-top: 0px !important;
+  padding: 0px;
 }
 
 .btn-home {
-    position: relative;
-    bottom: 16px;
-    left: 20px;
+  position: relative;
+  bottom: 16px;
+  left: 20px;
 }
 
 .btn-next {
-    position: relative;
-    bottom: 54px;
-    left: 110px;
+  position: relative;
+  bottom: 54px;
+  left: 110px;
 }
 
 .anc {
-    text-decoration: none;
-    color: #BF3EFF;
+  text-decoration: none;
+  color: #bf3eff;
 }
 
 .anc:hover {
-    color: #bf3eff79;
+  color: #bf3eff79;
 }
 
 .btn {
-    background-color: #BF3EFF;
-    color: white;
-    width: 70px;
-    border-radius: 6px;
+  background-color: #bf3eff;
+  color: white;
+  width: 70px;
+  border-radius: 6px;
 }
 
 .btn:hover {
-    color: white;
+  color: white;
 }
 
 .btn-back2 {
-    position: relative;
-    bottom: 16px;
-    left: 20px;
+  position: relative;
+  bottom: 16px;
+  left: 20px;
 }
 
 .home-card {
-    height: 400px;
-    width: 500px;
-    border-radius: 20px;
-    box-shadow: 10px 30px 20px rgba(0,0,0,0.3);   
+  height: 400px;
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.3);
 }
 
 .home-text {
-    line-height: 2;
+  line-height: 2;
 }
 
-.btn-enc{
-    width: 100px;
-    border-radius: 6px;
-    position: relative;
-    bottom: 2px;
-    left: 15px;
+.btn-enc {
+  width: 100px;
+  border-radius: 6px;
+  position: relative;
+  bottom: 2px;
+  left: 15px;
 }
-.btn-dec{
-    width: 100px;
-    border-radius: 6px;
-    position: relative;
-    bottom: 40px;
-    left: 130px;
+.btn-dec {
+  width: 100px;
+  border-radius: 6px;
+  position: relative;
+  bottom: 40px;
+  left: 130px;
 }
 
 .btn-op {
-    width: 82px;
-    /* position: relative;
+  width: 83px;
+  /* position: relative;
     bottom: 0px;
     left: 0px; */
 }
 
 .footer {
-    padding-top: 150px;
+  padding-top: 150px;
 }
 
 @media screen and (max-width: 480px) {
-    .home-card {
-        height: 450px;
-    }
+  .home-card {
+    height: 450px;
+  }
 }
 
 @media screen and (max-width: 392px) {
-    .home-card {
-        height: 500px;
-    }
+  .home-card {
+    height: 500px;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  .main-area {
+    padding-top: 40px;
+    height: 150vh;
+  }
 
-    .main-area {
-        padding-top: 40px;
-        height: 150vh;
-    }
+  .textarea {
+    height: 250px;
+  }
 
-    .textarea {
-        height: 250px;
-    }
+  .btn-op {
+    width: 83px;
+    position: relative;
+    bottom: 38px;
+    left: 80px;
+  }
 
-    .btn-op {
-        width: 80px;
-        position: relative;
-        bottom: 38px;
-        left: 80px;
-    }
-
-    .footer {
-        padding-top: 50px;
-    }
+  .footer {
+    padding-top: 50px;
+  }
 }
 
 @media screen and (min-height: 699px) and (max-width: 400px) {
-    .footer {
-        padding-top: 190px;
-    }
+  .footer {
+    padding-top: 190px;
+  }
 
-    .main-area {
-        padding-top: 100px;
-        height: 90vh;
-    }
+  .main-area {
+    padding-top: 100px;
+    height: 90vh;
+  }
 }

@@ -11,6 +11,15 @@ const output = document.querySelector(".output");
 const op_head = document.querySelector(".output-head");
 const btn_back2 = document.querySelector(".btn-back2");
 
+
+var sft_rng = document.getElementById("shift-range");
+var sft_val = document.getElementById("shift-val");
+sft_val.innerHTML = (sft_rng.value * 2);
+
+sft_rng.oninput = function () {
+    sft_val.innerHTML = (this.value * 2);
+}
+
 const deviceWidth = window.matchMedia("(max-width:991px)");
 
 function encode() {
