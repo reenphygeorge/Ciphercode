@@ -1,16 +1,20 @@
 const hme = document.querySelector(".home");
 const btn_hme = document.querySelector(".btn-home");
 const input = document.querySelector(".input");
+const inp_head = document.querySelector(".input-head");
 const txtarea = document.querySelector(".textarea");
 const btn_next = document.querySelector(".btn-next");
 const settings = document.querySelector(".settings");
 const btn_back = document.querySelector(".btn-back");
 const output = document.querySelector(".output");
+const op_head = document.querySelector(".output-head");
 const btn_back2 = document.querySelector(".btn-back2");
 
 const deviceWidth = window.matchMedia("(max-width:991px)");
 
 function encode() {
+    inp_head.innerHTML = "Normal Text";
+    op_head.innerHTML = "Cypher Text";
     if (deviceWidth.matches) {
         page1_mob();
     }
@@ -19,18 +23,16 @@ function encode() {
     }
 }
 
-// function decode() {
-//     if(deviceWidth.matches) {
-//         // const inp_head = document.querySelector(".imput-head");
-//         // inp_head.innerHTML = "Cypher Text";
-//         page1_mob();
-//     }
-//     else {
-//         page1();
-//         const inp_head = document.querySelector(".imput-head");
-//         inp_head.innerHTML = "Cypher Text";
-//     }    
-// }
+function decode() {
+    inp_head.innerHTML = "Cypher Text";
+    op_head.innerHTML = "Normal Text";
+    if (deviceWidth.matches) {
+        page1_mob();
+    }
+    else {
+        page1();
+    }
+}
 
 function home() {
     hme.classList.remove("d-none");
