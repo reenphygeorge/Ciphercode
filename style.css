@@ -118,7 +118,6 @@ label {
 
 .footer {
   padding-top: 130px;
-  /* padding-bottom: 30px; */
 }
 
 a {
@@ -128,7 +127,7 @@ a {
 
 @media screen and (max-width: 440px) {
   .main-area {
-    height: 100vh;
+    height: 115vh;
   }
   .home-card {
     height: 500px;
@@ -161,14 +160,3 @@ a {
     padding-top: 50px;
   }
 }
-
-/* @media screen and (min-height: 699px) and (max-width: 400px) {
-  .footer {
-    padding-top: 190px;
-  }
-
-  .main-area {
-    padding-top: 100px;
-    height: 90vh;
-  }
-} */
