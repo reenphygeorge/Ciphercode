@@ -12,6 +12,7 @@ const output = document.querySelector(".output");
 const op_head = document.querySelector(".output-head");
 const btn_back2 = document.querySelector(".btn-back2");
 var result = "";
+var enc = 0;
 
 const op_txt = document.querySelector(".output-text");
 
@@ -35,6 +36,7 @@ sft_rng.oninput = function () {
 
 // Function Definitions
 function encode() {
+    enc = 1;
     inp_head.innerHTML = "Normal Text";
     op_head.innerHTML = "Cypher Text";
     btn_op.innerHTML = "Encode";
@@ -47,6 +49,7 @@ function encode() {
 }
 
 function decode() {
+    enc = 0;
     inp_head.innerHTML = "Cypher Text";
     op_head.innerHTML = "Normal Text";
     btn_op.innerHTML = "Decode";
@@ -73,7 +76,60 @@ function op_disp() {
     else {
         page1();
     }
-    op_txt.innerHTML = result;
+    if (enc == 1) {
+        // Encoding
+        result = "";
+        let enc_lower = "abcdefghijklmnopqrstuvwxyz";
+        let enc_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        let len = s.length;
+        for (let i = 0; i < len; i++) {
+            if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
+                let temp = enc_upper.indexOf(s.charAt(i));
+                temp = ((temp + k) % 26);
+                result = result + (enc_upper.charAt(temp));
+            }
+            else if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+                let temp = enc_lower.indexOf(s.charAt(i));
+                temp = ((temp + k) % 26);
+                result = result + (enc_lower.charAt(temp));
+            }
+            else {
+                result = result + (s.charAt(i));
+            }
+        }
+        op_txt.innerHTML = result;
+    }
+    else {
+        // Decoding
+        result = "";
+        let enc_lower = "abcdefghijklmnopqrstuvwxyz";
+        let enc_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        let len = s.length;
+        for (let i = 0; i < len; i++) {
+            if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
+                let temp = enc_upper.indexOf(s.charAt(i));
+                temp = ((temp - k) % 26);
+                if (temp < 0) {
+                    temp = 26 + temp;
+                }
+                result = result + (enc_upper.charAt(temp));
+            }
+            else if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+                let temp = enc_lower.indexOf(s.charAt(i));
+                temp = ((temp - k) % 26);
+                if (temp < 0) {
+                    temp = 26 + temp;
+                }
+                result = result + (enc_lower.charAt(temp));
+            }
+            else {
+                result = result + (s.charAt(i));
+            }
+        }
+        op_txt.innerHTML = result;
+    }
 }
 function page1() {
     hme.classList.remove("d-flex");
@@ -120,26 +176,7 @@ function page2_mob() {
 }
 
 function page3_mob() {
-    // Encoding
-    let enc_lower = "abcdefghijklmnopqrstuvwxyz";
-    let enc_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    let len = s.length;
-    for (let i = 0; i < len; i++) {
-        if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
-            let temp = enc_upper.indexOf(s.charAt(i));
-            temp = ((temp + k) % 26);
-            result = result + (enc_upper.charAt(temp));
-        }
-        else if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
-            let temp = enc_lower.indexOf(s.charAt(i));
-            temp = ((temp + k) % 26);
-            result = result + (enc_lower.charAt(temp));
-        }
-        else {
-            result = result + (s.charAt(i));
-        }
-    }
     input.classList.remove("d-flex");
     input.classList.add("d-none");
     settings.classList.remove("d-flex");
