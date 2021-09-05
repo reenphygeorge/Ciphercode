@@ -108,19 +108,22 @@
 
 @media screen and (max-width: 440px) {
   .main-area {
-    height: 107vh;
+    height: 100vh;
   }
   .home-card {
     height: 500px;
+  }
+  .btn-op {
+    width: 83px;
+    position: relative;
+    bottom: 38px;
+    left: 80px;
   }
 }
 
 @media screen and (max-width: 360px) {
   .main-area {
     height: 120vh;
-  }
-  .home-card {
-    height: 500px;
   }
 }
 
@@ -132,13 +135,6 @@
 
   .textarea {
     height: 250px;
-  }
-
-  .btn-op {
-    width: 83px;
-    position: relative;
-    bottom: 38px;
-    left: 80px;
   }
 
   .footer {
