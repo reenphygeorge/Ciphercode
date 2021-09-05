@@ -127,7 +127,7 @@ a {
 
 @media screen and (max-width: 440px) {
   .main-area {
-    height: 115vh;
+    height: 100vh;
   }
   .home-card {
     height: 500px;
