@@ -100,31 +100,34 @@
 
 .btn-op {
   width: 83px;
-  /* position: relative;
-    bottom: 0px;
-    left: 0px; */
 }
 
 .footer {
   padding-top: 150px;
 }
 
-@media screen and (max-width: 480px) {
-  .home-card {
-    height: 450px;
+@media screen and (max-width: 440px) {
+  .main-area {
+    height: 107vh;
   }
-}
-
-@media screen and (max-width: 392px) {
   .home-card {
     height: 500px;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 360px) {
+  .main-area {
+    height: 120vh;
+  }
+  .home-card {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 500px) {
   .main-area {
     padding-top: 40px;
-    height: 150vh;
+    height: 140vh;
   }
 
   .textarea {
@@ -143,7 +146,7 @@
   }
 }
 
-@media screen and (min-height: 699px) and (max-width: 400px) {
+/* @media screen and (min-height: 699px) and (max-width: 400px) {
   .footer {
     padding-top: 190px;
   }
@@ -152,4 +155,4 @@
     padding-top: 100px;
     height: 90vh;
   }
-}
+} */
