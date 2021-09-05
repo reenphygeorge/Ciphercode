@@ -214,5 +214,3 @@ function page3_mob() {
     output.classList.add("d-flex");
     output.classList.remove("d-none");
 }
-
-// console.log(result);
