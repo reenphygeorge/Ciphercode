@@ -13,6 +13,10 @@ const op_head = document.querySelector(".output-head");
 const btn_back2 = document.querySelector(".btn-back2");
 var result = "";
 var enc = 0;
+var _case = document.getElementById("case");
+var valid = 1;
+var for_ch = document.getElementById("foreign-char");
+var valid2 = 0;
 
 const op_txt = document.querySelector(".output-text");
 
@@ -35,6 +39,25 @@ sft_rng.oninput = function () {
 }
 
 // Function Definitions
+
+function validator() {
+    if (_case.checked == false) {
+        valid = 0;
+    }
+    else {
+        valid = 1;
+    }
+}
+
+function validator2() {
+    if (for_ch.checked == true) {
+        valid2 = 1;
+    }
+    else {
+        valid2 = 0;
+    }
+}
+
 function encode() {
     enc = 1;
     inp_head.innerHTML = "Normal Text";
@@ -94,10 +117,14 @@ function op_disp() {
                 temp = ((temp + k) % 26);
                 result = result + (enc_lower.charAt(temp));
             }
-            else {
+            else if (valid2 == 0) {
                 result = result + (s.charAt(i));
             }
         }
+        if (valid == 0) {
+            result = result.toLowerCase();
+        }
+
         op_txt.innerHTML = result;
     }
     else {
@@ -124,9 +151,12 @@ function op_disp() {
                 }
                 result = result + (enc_lower.charAt(temp));
             }
-            else {
+            else if (valid2 == 0) {
                 result = result + (s.charAt(i));
             }
+        }
+        if (valid == 0) {
+            result = result.toLowerCase();
         }
         op_txt.innerHTML = result;
     }

@@ -5,6 +5,20 @@
 
 .logo {
   font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+h5,
+p,
+button,
+textarea,
+h6,
+label {
+  font-family: "Roboto", sans-serif;
+}
+
+.footer {
+  font-size: 20px;
 }
 
 .main-area {
@@ -103,7 +117,13 @@
 }
 
 .footer {
-  padding-top: 150px;
+  padding-top: 130px;
+  /* padding-bottom: 30px; */
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (max-width: 440px) {
