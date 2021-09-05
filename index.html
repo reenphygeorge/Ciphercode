@@ -61,9 +61,8 @@
           <div class="card data-card">
             <div class="card-body">
               <h5 class="card-title input-head">Normal Text</h5>
-              <!-- <h5 class="card-title d-none input-head-dec">Cypher Text</h5> -->
               <hr>
-              <textarea class="textarea mt-3" placeholder="Enter your text"></textarea>
+              <textarea class="textarea mt-3" placeholder="Enter your text" id="user-input"></textarea>
             </div>
             <button class="btn btn-md d-none btn-home" onclick="home()">Home</button>
             <button class="btn btn-md  btn-next" onclick="page2_mob()">Next</button>
@@ -94,7 +93,7 @@
               </div>
               <hr>
               <button class="btn btn-md btn-back d-none" onclick="page1_mob()">Back</button>
-              <button class="btn btn-md btn-op" onclick="page3_mob()">Encode</button>
+              <button class="btn btn-md btn-op" onclick="op_disp()">Encode</button>
             </div>
           </div>
         </div>
@@ -105,7 +104,7 @@
             <div class="card-body">
               <h5 class="card-title output-head">Cypher Text</h5>
               <hr>
-              <textarea class="textarea mt-3"></textarea>
+              <h6 class="output-text"></h6>
             </div>
             <button class="d-none btn btn-md btn-back2" onclick="page2_mob()">Back</button>
           </div>

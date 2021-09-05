@@ -1,3 +1,4 @@
+const deviceWidth = window.matchMedia("(max-width:991px)");
 const hme = document.querySelector(".home");
 const btn_hme = document.querySelector(".btn-home");
 const input = document.querySelector(".input");
@@ -10,18 +11,29 @@ const btn_back = document.querySelector(".btn-back");
 const output = document.querySelector(".output");
 const op_head = document.querySelector(".output-head");
 const btn_back2 = document.querySelector(".btn-back2");
+var result = "";
 
+const op_txt = document.querySelector(".output-text");
 
-const sft_rng = document.getElementById("shift-range");
-const sft_val = document.getElementById("shift-val");
-sft_val.innerHTML = (sft_rng.value * 2);
-
-sft_rng.oninput = function () {
-    sft_val.innerHTML = (this.value * 2);
+// Storing Input Text
+const usr_inp = document.getElementById("user-input");
+var s = "";
+usr_inp.oninput = function () {
+    s = usr_inp.value;
 }
 
-const deviceWidth = window.matchMedia("(max-width:991px)");
+// Storing shift constant
+const sft_rng = document.getElementById("shift-range");
+const sft_val = document.getElementById("shift-val");
+var k;
+sft_val.innerHTML = (sft_rng.value * 2);
+k = sft_rng.value * 2;
+sft_rng.oninput = function () {
+    sft_val.innerHTML = (this.value * 2);
+    k = (this.value * 2);
+}
 
+// Function Definitions
 function encode() {
     inp_head.innerHTML = "Normal Text";
     op_head.innerHTML = "Cypher Text";
@@ -54,6 +66,15 @@ function home() {
     output.classList.add("d-none");
 }
 
+function op_disp() {
+    if (deviceWidth.matches) {
+        page3_mob();
+    }
+    else {
+        page1();
+    }
+    op_txt.innerHTML = result;
+}
 function page1() {
     hme.classList.remove("d-flex");
     hme.classList.add("d-none");
@@ -99,6 +120,26 @@ function page2_mob() {
 }
 
 function page3_mob() {
+    // Encoding
+    let enc_lower = "abcdefghijklmnopqrstuvwxyz";
+    let enc_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    let len = s.length;
+    for (let i = 0; i < len; i++) {
+        if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
+            let temp = enc_upper.indexOf(s.charAt(i));
+            temp = ((temp + k) % 26);
+            result = result + (enc_upper.charAt(temp));
+        }
+        else if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+            let temp = enc_lower.indexOf(s.charAt(i));
+            temp = ((temp + k) % 26);
+            result = result + (enc_lower.charAt(temp));
+        }
+        else {
+            result = result + (s.charAt(i));
+        }
+    }
     input.classList.remove("d-flex");
     input.classList.add("d-none");
     settings.classList.remove("d-flex");
@@ -106,3 +147,5 @@ function page3_mob() {
     output.classList.add("d-flex");
     output.classList.remove("d-none");
 }
+
+// console.log(result);
