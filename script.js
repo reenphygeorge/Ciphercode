@@ -84,14 +84,6 @@ function decode() {
     }
 }
 
-function home() {
-    hme.classList.remove("d-none");
-    hme.classList.add("d-flex");
-    input.classList.add("d-none");
-    settings.classList.add("d-none");
-    output.classList.add("d-none");
-}
-
 function op_disp() {
     if (deviceWidth.matches) {
         page3_mob();
